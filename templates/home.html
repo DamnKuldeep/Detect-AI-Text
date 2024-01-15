@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Detect AI Text</title>
+    <link rel="stylesheet" href="../static/style/style.css">
+</head>
+
+<body>
+    <h1 id="text">
+        LLM Detect AI Text
+    </h1>
+
+    <form>
+        <label id="label" for="userInput">Enter the text below to identify it is AI generated text or Human text.</label>
+        <textarea type="text" id="userInput" name="text" placeholder="Pastre Here..." spellcheck="false"></textarea>
+        <br>
+        <button id="check" class="Check"type="button" onclick="checkContent()">Check</button>
+    </form>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <p id="modalResult"></p>
+            <button class="close" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+    
+    <script src="../static/script/script.js"></script>
+</body>
+</html>
