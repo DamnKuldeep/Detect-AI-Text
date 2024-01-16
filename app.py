@@ -9,7 +9,6 @@ def index():
         data = request.get_json()
         user_input = data.get('text', '')
         ans,prob = model_kul.result(user_input)
-        print(ans)
         if ans==0:
             modified_text = "It's a Human written text. With probability of " + str(f'{prob*100:.4f}') +"%."
         else:

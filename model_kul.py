@@ -25,9 +25,7 @@ def result(text):
         input_ids,attention_mask=tokenized_final['input_ids'],tokenized_final['attention_mask']
         output=model(input_ids,attention_mask=attention_mask)
         probabilities = torch.softmax(output.logits, dim=1)
-        ans, prob = torch.max(probabilities, dim =1)
-        print(ans)
-        print(probabilities)
+        prob,ans = torch.max(probabilities, dim =1)
     return ans.item(), prob.item()
 
 
